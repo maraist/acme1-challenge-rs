@@ -1,0 +1,49 @@
+[package]
+name = "recallai-vid-transcode"
+version = "0.1.0"
+edition = "2021"
+default-run = "recallai-vid-transcode"
+
+[dependencies]
+num_cpus = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+structopt = "0.3.26"
+thiserror = "1"
+image={ version = "0.24.9", features = ["jpeg_rayon"]}
+#rayon="1"
+crossbeam-channel = "*"
+futures-lite = "2"
+futures = "0.3.30"
+tokio={version="1", features=["full"]}
+tokio-util = {version="0.7", features=["full"]}
+ulid = "1"
+reqwest={version="*", features = ["json", "stream",  "tokio-socks", "tokio-util" ]}
+futures-util={version="*", features = ["default", "sink"]}
+bytes="1"
+async-stream="*"
+glommio={version="*", optional=true}
+
+[features]
+glommio=["dep:glommio"]
+
+[profile.release-safe]
+inherits="release"
+opt-level=3
+lto="fat"
+strip="debuginfo"
+
+[profile.release]
+opt-level=3
+lto="fat"
+overflow-checks=false
+strip="debuginfo"
+panic="abort"
+
+[[bin]]
+name="extract-images"
+path="src/bin/extract_images.rs"
+
+[build]
+# Note this will NOT work if you build on one machine-arch and run on another
+rustflags = ["-C", "target-cpu=native"]

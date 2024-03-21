@@ -1,0 +1,4 @@
+[workspace]
+members = [ "recallai", "web-server" ]
+default-members = ["web-server"]
+resolver = "2"

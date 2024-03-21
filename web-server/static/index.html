@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" class="scroll-pb-16 scroll-pt-16">
+<head>
+    <link rel="icon" type="image/x-icon"
+          href="https://assets-global.website-files.com/620d732b1f1f7b244ac89f0e/620d732c1f1f7b345dc89f34_Favicon%2032.png"/>
+    <link href="tailslim.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Recompos</title>
+    <script>
+        async function copy(name) {
+            let value = document.getElementById(name).textContent;
+            await navigator.clipboard.writeText(value);
+            console.log(`wrote ${name} to clipboard`)
+        }
+    </script>
+</head>
+<body class="scroll-pt-16 scroll-pb-16 overflow-x-clip">
+
+<!--  Header -->
+<div class="fixed top-0 w-full h-14 bg-black shadow-xl border-b border-white z-10 ">
+    <div class="xl:mx-auto xl:w-[1280px]">
+        <div class="px-4 xl:w-[1280px] flex justify-between items-center text-white">
+            <div class="self-start flex justify-center items-center h-14 group/logo relative">
+                <div class="hidden group-hover/logo:flex text-white border rounded-2xl py-2 px-3 border-amber-500
+                    absolute top-14 left-0 w-40 z-20 bg-slate-400 shadow-2xl">
+                    https://recall.ai
+                </div>
+                <a href="https://recall.ai" class="text-4xl">Recall.ai</a>
+            </div>
+            <div class="flex gap-4">
+                <a href="#abstract" class="hover:underline">
+                    Abstract
+                </a>
+                <a href="#api" class="hover:underline">
+                    API
+                </a>
+                <a href="#examples" class="hover:underline">
+                    Examples
+                </a>
+                <a href="#errors" class="hover:underline">
+                    Errors
+                </a>
+            </div>
+            <div class="flex ">
+                <div class="w-12 h-12 group/tel relative">
+                    <div class="hidden group-hover/tel:flex text-white border rounded-2xl py-2 px-3 border-amber-500 absolute top-14 -left-16 w-40 z-20 bg-slate-400 shadow-2xl">
+                        Tel: 202 378 8049
+                    </div>
+                    <a href="tel:2023788049">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg class="w-12 h-h12 fill-slate-400" viewBox="0 0 32 32"
+                             xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <clipPath id="clip-headset">
+                                    <rect width="32" height="32"/>
+                                </clipPath>
+                            </defs>
+                            <g id="headset" clip-path="url(#clip-headset)">
+                                <g id="Group_3402" data-name="Group 3402" transform="translate(-260)">
+                                    <g id="Group_3395" data-name="Group 3395">
+                                        <g id="Group_3394" data-name="Group 3394">
+                                            <g id="Group_3393" data-name="Group 3393">
+                                                <path id="Path_4055" data-name="Path 4055"
+                                                      d="M276,0a12.549,12.549,0,0,0-12.534,12.535v7.414a5.511,5.511,0,0,0,5.505,5.505.92.92,0,0,0,.92-.921V15.365a.92.92,0,0,0-.92-.921,5.477,5.477,0,0,0-3.664,1.408V12.535a10.643,10.643,0,0,1,.308-2.5c1.622-3.32,5.66-5.682,10.385-5.682s8.763,2.362,10.385,5.682a10.643,10.643,0,0,1,.308,2.5v3.317a5.477,5.477,0,0,0-3.664-1.408.92.92,0,0,0-.92.921v9.168a.92.92,0,0,0,.92.921,5.465,5.465,0,0,0,2.478-.6v2.025a2.891,2.891,0,0,1-2.888,2.888h-1.471a1.709,1.709,0,0,0-1.634-1.229h-3.058a1.729,1.729,0,0,0,0,3.458h3.058a1.7,1.7,0,0,0,1.629-1.229h1.476a3.892,3.892,0,0,0,3.888-3.888V24.212a5.5,5.5,0,0,0,2.027-4.263V12.535A12.549,12.549,0,0,0,276,0Zm-7.95,16.4V23.5a3.665,3.665,0,0,1,0-7.094ZM276,3.43a13.393,13.393,0,0,0-8.928,3.234,10.675,10.675,0,0,1,17.856,0A13.393,13.393,0,0,0,276,3.43ZM279.514,31h-3.058a.721.721,0,0,1-.713-.745.713.713,0,0,1,.713-.713h3.058a.722.722,0,0,1,.713.745A.714.714,0,0,1,279.514,31Zm4.436-7.5V16.4a3.665,3.665,0,0,1,0,7.094Z"
+                                                />
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g id="Group_3398" data-name="Group 3398">
+                                        <g id="Group_3397" data-name="Group 3397">
+                                            <g id="Group_3396" data-name="Group 3396">
+                                                <path id="Path_4056" data-name="Path 4056"
+                                                      d="M270.813,14.519a.459.459,0,0,0-.46.46v9.94a.46.46,0,0,0,.92,0v-9.94A.459.459,0,0,0,270.813,14.519Z"
+                                                />
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g id="Group_3401" data-name="Group 3401">
+                                        <g id="Group_3400" data-name="Group 3400">
+                                            <g id="Group_3399" data-name="Group 3399">
+                                                <path id="Path_4057" data-name="Path 4057"
+                                                      d="M281.647,24.919v-9.94a.46.46,0,0,0-.92,0v9.94a.46.46,0,0,0,.92,0Z"
+                                                />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="w-12 h-12 group/email relative">
+                    <div class="hidden group-hover/email:flex text-white border rounded-2xl py-2 px-3 border-amber-500 absolute top-14 -left-24 w-44 z-10 bg-slate-400 shadow-2xl">
+                        Email: support@recall.ai
+                    </div>
+                    <a href="mailto:support@recall.ai">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg class="w-12 h-12 fill-amber-100" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="rounded-full border border-white w-12 h-12 flex justify-center items-center">
+                    Anon
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<!--    <div class="pt-14 bg-cyan-950 text-white ">-->
+<div class="bg-indigo-50">
+    <div class="pt-14 bg-indigo-100 xl:w-[1280px] xl:mx-auto ">
+        <!--    <div class="pt-14 bg-violet-700 ">-->
+        <div class="relative">
+            <!--  Main Content-->
+            <div class="content px-8 ">
+                <div class="text-3xl font-bold my-8">Recall AI</div>
+                <div class="text-2xl font-bold my-4">Video ReCompose API Documentation</div>
+                <div class="">
+                    <!-- TODO-->
+                </div>
+
+                <hr id="abstract" class="h-px bg-gray-700 border-0 mx-4"/>
+                <!--                    <a id="abstract" class=""></a>-->
+                <!--                    <div class="h-14">&lt;!&ndash; spacer &ndash;&gt;</div>-->
+                <div class="text-2xl font-bold my-4">Abstract</div>
+                <p class="my-3">
+                    This web-service initiates a video transcode
+                    <code class="text-pink-500">pull-transcode-push</code>
+                    pipeline stage.
+                </p>
+                <p class="my-3">
+                    It accepts a tripplet of web-URIs:
+                <ul>
+                    <li class="list-disc list-inside">Two of which are sources which will be accessed via an
+                        <code>HTTP-GET</code>.
+                    </li>
+                    <li class="list-disc list-inside">
+                        One of which will have the results pushed to via an <code>HTTP-POST</code>.
+                    </li>
+                </ul>
+                </p>
+                <p class="my-3">
+                    The service can be tested by self-routing; A sample video clip is available.
+                </p>
+
+                <!--                    <div class="h-14">&lt;!&ndash; spacer &ndash;&gt;</div>-->
+                <!--                    <a id="api" class="scroll-pt-16"></a>-->
+                <hr id="api" class="h-px bg-gray-700 border-0 mx-4"/>
+                <div class="text-2xl font-bold my-4">API</div>
+
+                <div class="border p-1 w-[1044px] border-dashed ">
+                    <div class="font-bold text-2xl w-80 py-4 px-4">
+                        <span class="text-pink-400 pr-4">POST</span> <span class="text-blue-850">/recompose</span>
+                    </div>
+                    <hr class="h-px bg-yellow-600 border-0 mx-4"/>
+                    <div class="px-4 py-4">Transcode a video asynchronously, returning a polling URL or error</div>
+                    <hr class="h-px bg-yellow-600 border-0 mx-4"/>
+                    <table class="w-full mt-4">
+                        <tr>
+                            <td class="font-semibold w-48">
+                                Request Content Type:
+                            </td>
+                            <td class="text-pink-500">
+                                application/json
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="request-schema" class="font-semibold w-48">
+                                <!--                                    <a id="request-schema"></a>-->
+                                Request Payload:
+                            </td>
+                            <td>
+<pre class="prettyprint lang-ts w-[832px]">
+    type Request = {
+        video_url: string; // URI that accepts GET, containing a source video
+        rules_url: string; // URI that accepts GET, containing processing rules
+        dest_url:  string; // URI that accepts POST, receives transcoded video file
+    };
+</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="sample-request" class="font-semibold w-48">Sample Request</td>
+                            <td>
+<pre class="prettyprint lang-json w-[832px]">
+    {
+        "video_url": "https://www.example.com/input/video.rvid",
+        "rules_url": "https://www.example.com/input/rules.json",
+        "dest_url": "https://www.example.com/output/video.rvid",
+    }
+</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold w-48">
+                                Response Content Type:
+                            </td>
+                            <td class="text-pink-500">
+                                application/json
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold w-48">
+                                Response Payload:
+                            </td>
+                            <td>
+<pre class="prettyprint lang-ts w-[832px] ">
+    type ErrorItem = {
+        status: string?; // A stringified HTTP status code
+        title:  string?; // Short human display value for the reason of the error
+        detail: string?; // Potentially longer description of the cause of the error.
+        source: string?; // A link to this documentation describing the error
+    };
+    type DataItem = {
+        /* If the status is RUNNING, this contains a URL that
+         * can be GET-fetched to see the current status.
+         */
+        poll_url: string;
+    };
+    type Response = {
+        status: "COMPLETED" | "RUNNING" | "ERROR";
+        errors: Array&lt;ErrorItem&gt;?; // Only present when status === "ERROR"
+        data:   DataItem?:         // Only present when status === "RUNNING"
+    };
+</pre>
+                            </td>
+                        </tr>
+                        <tr class="h-[320px]">
+                            <td class="font-semibold w-48">Sample Request</td>
+                            <td class="align-top">
+                                <input id="status_running" class="peer/running invisible" type="radio" name="status"
+                                       checked>
+                                <label for="status_running"
+                                       class="select-none px-2 py-1 h-7 w-28 bg-gray-400
+                                           peer-checked/running:bg-blue-900 inline-flex justify-center rounded-t-2xl
+                                           text-white">RUNNING</label>
+                                <input id="status_completed" class="peer/completed invisible" type="radio"
+                                       name="status">
+                                <label for="status_completed"
+                                       class="select-none px-2 py-1 h-7 w-28 bg-gray-400
+                                           peer-checked/completed:bg-blue-900 inline-flex justify-center rounded-t-2xl
+                                           text-white">COMPLETED</label>
+                                <input id="status_error" class="peer/error invisible" type="radio" name="status">
+                                <label for="status_error"
+                                       class="select-none px-2 py-1 h-7 w-28 bg-gray-400
+                                           peer-checked/error:bg-blue-900 inline-flex justify-center rounded-t-2xl
+                                           text-white">ERROR</label>
+                                <pre class="prettyprint lang-json w-[832px] hidden peer-checked/running:block">
+    {
+       "status": "RUNNING",
+       "data": {
+                    "poll_url": "http://recompose.api.recall.ai/recompose/poll?id=12345"
+               }
+    }
+</pre>
+                                <pre class="prettyprint lang-json w-[832px] hidden peer-checked/error:block">
+    {
+       "status": "ERROR",
+       "errors":
+         [
+           {
+             "status": "422",
+             "title": "required rules_url field is missing",
+             "source": "http://recompose.api.recall.ai/static/index.html#rules_url_missing"
+           }
+         ]
+    }
+</pre>
+                                <pre class="prettyprint lang-json w-[832px] hidden peer-checked/completed:block">
+    {
+       "status": "COMPLETED",
+    }
+</pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <hr id="examples" class="h-px bg-gray-700 border-0 mx-4"/>
+
+                <div class="text-2xl font-bold my-4">Examples</div>
+
+                <fieldset class="py-4">
+                    <input id="language_js" class="peer/js invisible" type="radio" name="language" checked>
+                    <label for="language_js"
+                           class="select-none px-2 py-1 h-7 w-28 bg-gray-400 peer-checked/js:bg-blue-900 inline-flex
+                               justify-center rounded-t-2xl text-white">Javascript</label>
+                    <input id="language_py" class="peer/py invisible" type="radio" name="language">
+                    <label for="language_py"
+                           class="select-none px-2 py-1 h-7 w-28 bg-gray-400 peer-checked/py:bg-blue-900 inline-flex
+                                justify-center rounded-t-2xl text-white">Python</label>
+                    <div class="w-[1024px] h-[720px] hidden peer-checked/py:block relative">
+                        <button class="absolute top-2 right-2 border border-black p-1 text-xs"
+                                onclick="copy('python_example')">Copy
+                        </button>
+                        <pre id="python_example" class="prettyprint lang-py ">
+import requests
+import time
+msg = {
+    'video_url': "https://example.com/input/input.rvid",
+    'rules_url': "https://example.com/input/rules.json",
+    'dest_url': "https://example.com/output/output.rvid"
+}
+r = requests.post("http://recompose.api.recall.ai/recompose", data=msg)
+doc = r.json()
+while r.get("status",None) == "RUNNING":
+  time.sleep(5)
+  r = requests.get(r.data.poll_url)
+status=r.get("status","ERROR")
+if status == "ERROR":
+  if "errors" in r:
+      for err in r.errors:
+          print(f"Error: {err.title}")
+  return False
+if status == "SUCCESS":
+  return True
+</pre>
+                    </div>
+                    <div class="w-[1024px] h-[720px] hidden peer-checked/js:block relative">
+                        <button class="absolute top-2 right-2 border border-black p-1 text-xs"
+                                onclick="copy('javascript_example')">Copy
+                        </button>
+                        <pre id="javascript_example" class="prettyprint lang-js linnums">
+  let msg = {
+    video_url: "https://example.com/input/input.rvid",
+    rules_url: "https://example.com/input/rules.json",
+    dest_url: "https://example.com/output/output.rvid",
+  }
+  let encoded_message = JSON.stringify(msg)
+  let server_url = "https://recompose.api.recall.ai/recompose"
+  let options = {
+                   method: 'POST',
+                   body: encoded_message
+                }
+  let response = await fetch(server_url, options)
+  const sleep = (delay)=> new Promise((res)=> setTimeout(res,delay))
+  while (response.status === "RUNNING") {
+       await sleep(5000);
+       response = await fetch(response.data.poll_url)
+  }
+  if (response.status === "COMPLETED") {
+    return true
+  } else if (response.status === "ERROR") {
+    for( let err of response.errors ) {
+        console.log(`Could not process job: ${err.title}`)
+    }
+    return false
+  }
+</pre>
+                    </div>
+                </fieldset>
+            </div>
+
+            <hr id="errors" class="h-px bg-gray-700 border-0 mx-8"/>
+            <div class="text-2xl font-bold my-4 px-4">Error Messages</div>
+            <div class="flex flex-col gap-3 px-4">
+                <div id="missing_video_url" class="border w-[1024px] p-1">
+                    <p>The video_url field is missing</p>
+                    <p>The Video URL specifies a URL to a source video that can be accessed via a GET call with no
+                        permissions</p>
+                    <p>see <a href="#request-schema" class="underline">Request Schema</a></p>
+                </div>
+                <div id="missing_rules_url" class="border w-[1024px] p-1">
+                    <p>The rules_url field is missing</p>
+                    <p>The Rules URL specifies a URL to a JSON that can be accessed via a GET call with no
+                        permissions</p>
+                    <p>see <a href="#request-schema" class="underline">Request Schema</a></p>
+                </div>
+                <div id="missing_dst_url" class="border w-[1024px] p-1">
+                    <p>The dest_url field is missing</p>
+                    <p>The Destination URL specifies a URL to a JSON that can be accessed via a POST call with no
+                        permissions</p>
+                    <p>see <a href="#request-schema" class="underline">Request Schema</a></p>
+                </div>
+                <div id="invalid_video_url" class="border w-[1024px] p-1">
+                    <p>The video_url field does not contain a proper URL</p>
+                    <p>The Video URL specifies a URL to a source video that can be accessed via a GET call with no
+                        permissions</p>
+                    <p>see <a href="#request-schema" class="underline">Request Schema</a></p>
+                </div>
+                <div id="invalid_rules_url" class="border w-[1024px] p-1">
+                    <p>The rules_url field does not contain a proper URL</p>
+                    <p>The Rules URL specifies a URL to a JSON that can be accessed via a GET call with no
+                        permissions</p>
+                    <p>see <a href="#request-schema" class="underline">Request Schema</a></p>
+                </div>
+                <div id="invalid_dst_url" class="border w-[1024px] p-1">
+                    <p>The dest_url field does not contain a proper URL</p>
+                    <p>The Destination URL specifies a URL to a JSON that can be accessed via a POST call with no
+                        permissions</p>
+                    <p>see <a href="#request-schema" class="underline">Request Schema</a></p>
+                </div>
+                <div id="system_error" class="border w-[1024px] p-1">
+                    <p>Status: 500</p>
+                    <p>Please contact a customer representative</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Footer -->
+<div class="fixed bottom-0 bg-zinc-500 px-8 h-12 border-t border-t-white w-full z-10">
+    <div class="xl:w-[1280px] xl:mx-auto">
+        <div class="h-12 flex justify-end items-center">
+            © 2024 Recall Inc...
+        </div>
+    </div>
+</div>
+</body>
+</html>
